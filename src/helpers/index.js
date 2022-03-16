@@ -1,0 +1,16 @@
+
+export const generateId = () => {
+    const id = crypto.randomUUID();
+    return id
+}
+
+export const formatDate = (date) => {
+    const newDate = new Date(date);
+    const options = {
+        year: 'numeric',
+        month: 'long',
+        day: '2-digit',
+    }
+
+    return newDate.toLocaleDateString('es-ES', options);
+}
